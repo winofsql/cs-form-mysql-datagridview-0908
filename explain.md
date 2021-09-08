@@ -28,3 +28,15 @@
 
             }
 ```
+
+### 実行する SQL の準備
+```cs
+            command.Connection = connection;
+            // コマンドを通常 SQL用に変更
+            command.CommandType = CommandType.Text;
+
+            // *****************************
+            // 実行 SQL
+            // *****************************
+            command.CommandText = "select * from 社員マスタ";
+```
