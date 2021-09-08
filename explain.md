@@ -42,7 +42,7 @@
 ```
 
 ## 読み込みと DataGridView への結果のセット
-```
+```cs
             try
             {
                 OdbcDataReader reader = command.ExecuteReader();
