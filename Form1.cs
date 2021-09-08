@@ -56,7 +56,7 @@ namespace cs_form_mysql_datagridview
             // *****************************
             // 実行 SQL
             // *****************************
-            command.CommandText = "select * from 社員マスタ";
+            command.CommandText = "select * from 商品マスタ where 商品コード <= '0010'";
 
             try
             {
@@ -80,6 +80,8 @@ namespace cs_form_mysql_datagridview
             }
 
             connection.Close();
+
+            dataGridView1.AutoResizeColumns();
 
         }
     }
