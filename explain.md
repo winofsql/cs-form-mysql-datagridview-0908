@@ -9,3 +9,22 @@
             builder.Add("uid", "root");
             builder.Add("pwd", "");
 ```
+
+## 接続
+```cs
+            OdbcConnection connection = new OdbcConnection();
+            connection.ConnectionString = builder.ConnectionString;
+
+            OdbcCommand command = new OdbcCommand();
+
+            try
+            {
+                connection.Open();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("エラー:" + ex.Message);
+
+            }
+```
