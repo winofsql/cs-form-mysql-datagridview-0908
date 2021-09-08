@@ -40,3 +40,27 @@
             // *****************************
             command.CommandText = "select * from 社員マスタ";
 ```
+
+## 読み込みと DataGridView への結果のセット
+```
+            try
+            {
+                OdbcDataReader reader = command.ExecuteReader();
+
+                DataTable dataTable = new DataTable();
+
+                // DataReader よりデータを格納
+                dataTable.Load(reader);
+
+                // 画面の一覧表示用コントロールにセット
+                dataGridView1.DataSource = dataTable;
+
+                // リーダを使い終わったので閉じる
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("エラー:" + ex.Message);
+
+            }
+```
