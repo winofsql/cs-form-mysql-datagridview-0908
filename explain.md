@@ -69,3 +69,8 @@
 ```cs
             connection.Close();
 ```
+
+## 6) 列幅の自動調整
+```
+            dataGridView1.AutoResizeColumns();
+```
