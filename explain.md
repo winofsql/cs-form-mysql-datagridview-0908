@@ -1,4 +1,4 @@
-## 接続文字列作成
+## 1) 接続文字列作成
 ```cs
             OdbcConnectionStringBuilder builder = new OdbcConnectionStringBuilder();
             builder.Driver = "MySQL ODBC 8.0 Unicode Driver";
@@ -10,7 +10,7 @@
             builder.Add("pwd", "");
 ```
 
-## 接続
+## 2) 接続
 ```cs
             OdbcConnection connection = new OdbcConnection();
             connection.ConnectionString = builder.ConnectionString;
@@ -29,7 +29,7 @@
             }
 ```
 
-### 実行する SQL の準備
+### 3) 実行する SQL の準備
 ```cs
             command.Connection = connection;
             // コマンドを通常 SQL用に変更
@@ -41,7 +41,7 @@
             command.CommandText = "select * from 社員マスタ";
 ```
 
-## 読み込みと DataGridView への結果のセット
+## 4) 読み込みと DataGridView への結果のセット
 ```cs
             try
             {
@@ -65,7 +65,7 @@
             }
 ```
 
-## 接続解除
+## 5) 接続解除
 ```cs
             connection.Close();
 ```
